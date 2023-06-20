@@ -1,0 +1,111 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+body{
+    background-color: maroon;
+    color:white;
+}
+
+/* H1-H6 */
+h1 {
+    font-size: 200%;
+    font-weight:bolder;
+    text-align: center;
+    color:black;
+}
+
+h2 {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 125%;
+    font-weight:bold;
+}
+
+/* Header */
+header {
+    background-color: whitesmoke;
+    margin: 0% 20%;
+    border-color: black;
+}
+
+/* Nav Bar */
+nav{
+    background-color: black;
+    color:white;
+    text-align:center;
+}
+
+nav a {
+    margin: 0% 5%;
+    text-decoration: none;
+    text-align: center;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color:red;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+nav ul li {
+ display:inline-block;
+ margin-left: 2%;
+ width: auto;
+}
+/* End Nav Bar */
+/* End Header */
+
+/* Cards */
+.container{
+    margin: 20px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    border: 10px white;
+}
+
+.card{
+    box-shadow: 20px 20px 20px gray;
+}
+
+.card-image {
+    width:auto;
+    display:block;
+}
+
+.card-content{
+    line-height: 1.5;
+    font-size: .9em;
+    padding: 15px;
+    background: blue;
+}
+/* Cards end */
+
+@media screen and (max-width: 500px) {
+    nav {
+        display: flex;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto, 1fr);
+    }
+}
+
+footer {
+    background-color: whitesmoke;
+    color:black;
+    text-align: center;
+    bottom:0;
+    width:100%;
+    height:2.5rem;
+    margin-top:auto;
+}
