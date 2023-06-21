@@ -1,9 +1,17 @@
+:root{
+    --mint:#DDFFE7;
+    --spearmint:#98D7C2;
+    --teal-g:#167D7F;
+    --teal:#29A0B1;
+    --text:white;
+}
+
 *{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 body{
-    background-color: maroon;
+    background-color: var(--teal-g);
     color:white;
 }
 
@@ -11,8 +19,12 @@ body{
 h1 {
     font-size: 200%;
     font-weight:bolder;
-    text-align: center;
+    /* text-align: center; */
     color:black;
+    padding-left: 10px;
+    /* position:absolute;
+    left:150px;
+    top:0; */
 }
 
 h2 {
@@ -27,15 +39,20 @@ h3 {
 
 /* Header */
 header {
-    background-color: whitesmoke;
-    margin: 0% 20%;
-    border-color: black;
+    background-color: var(--spearmint);
+    padding-bottom:10px;
+    /* margin: 0% 20%; */
+}
+
+header img {
+    max-width:150px;
+    position:relative;
 }
 
 /* Nav Bar */
 nav{
-    background-color: black;
-    color:white;
+    background-color: var(--teal);
+    color:var(--text);
     text-align:center;
 }
 
@@ -46,7 +63,7 @@ nav a {
 }
 
 a{
-    color:white;
+    color:var(--text);
 }
 
 a:hover{
@@ -67,18 +84,26 @@ nav ul li {
 .container{
     margin: 20px auto;
     max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
     gap: 20px;
-    border: 10px white;
 }
 
 .card{
-    box-shadow: 20px 20px 20px gray;
+    /* box-shadow: 0px 0px 20px white; */
+    border: 1px var(--mint) dashed;
+    max-width: 300px;
+}
+
+.card:hover{
+    box-shadow: 0 0 20px var(--mint);
 }
 
 .card-image {
-    width:auto;
+    width:100%;
     display:block;
 }
 
@@ -86,26 +111,27 @@ nav ul li {
     line-height: 1.5;
     font-size: .9em;
     padding: 15px;
-    background: blue;
+    background: var(--teal);
 }
 /* Cards end */
 
 @media screen and (max-width: 500px) {
     nav {
         display: flex;
+        flex-wrap:wrap;
     }
 
-    .container {
+    /* .container {
         grid-template-columns: repeat(auto, 1fr);
-    }
+    } */
 }
 
 footer {
-    background-color: whitesmoke;
+    background-color: var(--spearmint);
     color:black;
     text-align: center;
-    bottom:0;
-    width:100%;
+    /* bottom:0; */
+    /* width:100%; */
     height:2.5rem;
     margin-top:auto;
 }
