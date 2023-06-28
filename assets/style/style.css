@@ -7,7 +7,8 @@
 }
 
 *{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--text);
 }
 
 body{
@@ -15,50 +16,49 @@ body{
     color:white;
 }
 
-/* H1-H6 */
-h1 {
-    font-size: 200%;
-    font-weight:bolder;
-    /* text-align: center; */
-    color:black;
-    padding-left: 10px;
-    /* position:absolute;
-    left:150px;
-    top:0; */
-}
-
-h2 {
-    font-size: 150%;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 125%;
-    font-weight:bold;
-}
-
 /* Header */
 header {
     background-color: var(--spearmint);
-    padding-bottom:10px;
-    /* margin: 0% 20%; */
+    width: 80%;
+    margin: 0px auto;
+    height:150px;
+    position:relative;
+    display:flex;
 }
 
-/* header img {
-    max-width:150px;
+h1 {
+    font-size: 300%;
+    font-weight:bolder;
+    text-align: center;
+    color:black;
     position:relative;
-} */
+    top:20%;
+    margin:0 auto;
+}
+
+header img {
+    max-width:150px;
+    position:absolute;
+    border-right: 5px solid var(--teal);
+    border-left: 5px solid var(--teal);
+    border-radius: 50%;
+    bottom:0px;
+    z-index:1;
+}
 
 /* Nav Bar */
 header nav{
     background-color: var(--teal);
     color:var(--text);
     text-align:center;
+    position:absolute;
+    width:100%;
+    bottom:0;
+    /* right:0; */
 }
 
-nav a {
+nav li {
     margin: 0% 5%;
-    text-decoration: none;
     text-align: center;
 }
 
@@ -74,37 +74,84 @@ a:hover{
 
 nav ul li {
  display:inline-block;
- margin-left: 2%;
- width: auto;
 }
 /* End Nav Bar */
 /* End Header */
 
-.profile {
+h2 {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#aboutMe {
+    display:flex;
+    margin: 10px auto;
+    text-align:center;
 
 }
 
-.profile img {
-    max-width: 150px;
+#aboutMeTitle {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin:auto;
+    border-right: 5px solid var(--spearmint);
+    border-left: 5px solid var(--spearmint);
+    background-color: var(--teal-g);
+    padding:5px;
+}
+
+#aboutMeContent {
+    padding: 20;
+    width:90%;
+    margin:auto;
+    padding:25px 0;
+    background-color: var(--teal);
+}
+
+
+
+#myWork {
+    display:flex;
+    
+}
+#myWorkTitle {
+    border-right: 5px solid var(--spearmint);
+    border-left: 5px solid var(--spearmint);
+    padding: 5px;
+    margin:auto;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 
 /* Cards */
 .container{
     margin: 20px auto;
-    max-width: 1000px;
-    /* display: grid; */
-    /* grid-template-columns: repeat(4, 1fr); */
     display:flex;
     flex-wrap:wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
     gap: 20px;
+    width:90%;
 }
 
+
+
 .card{
-    /* box-shadow: 0px 0px 20px white; */
     border: 1px var(--mint) dashed;
     border-radius: 20px;
-    max-width: 300px;
+    overflow:hidden;
+    position:relative;
+    flex:1 0;
+    min-width:25%;
+    max-width:;
+}
+
+.card h2 {
+    position:absolute;
+    top:5px;
+    width:100%;
+    text-align:center;
+    user-select: none;
 }
 
 .card:hover{
@@ -115,36 +162,65 @@ nav ul li {
     width:100%;
     display:block;
     border-radius:20px 20px 0 0;
+    border-bottom: 2px solid var(--mint);
 }
 
 .card-content{
     line-height: 1.5;
     font-size: .9em;
-    padding: 15px;
+    padding: 5px;
     background: var(--teal);
     border-radius: 0 0 20px 20px;
+    height:100%;
+    width:100%;
+}
+
+.card-content p{
+    /* margin:0 auto; */
+    width:95%;
+    text-align:center;
+}
+
+
+.card:first-of-type{
+    flex:3;
+}
+
+.card a {
+    text-decoration: none;
 }
 /* Cards end */
 
-@media screen and (max-width: 500px) {
-    nav {
+@media screen and (max-width: 800px) {
+    header nav {
         display: flex;
         flex-wrap:wrap;
     }
 
-    /* .container {
-        grid-template-columns: repeat(auto, 1fr);
-    } */
+    header ul {
+        width:100%;
+    }
 }
 
+/* Footer */
 footer {
     background-color: var(--spearmint);
+    border-top: 10px solid var(--teal);
     color:black;
     text-align: center;
-    /* bottom:0; */
-    /* width:100%; */
-    height:2.5rem;
-    padding: 10px 0;
+    padding: 16px 0 20px 0;
+    position:relative;
+    width:80%;
+    margin:0 auto;
+}
+
+h3 {
+    font-size: 125%;
+    font-weight:bold;
+    position:absolute;
+    /* max-height:100%; */
+    width:25%;
+    bottom:10px;
 }
 
 footer ul li{
