@@ -105,7 +105,8 @@ h2 {
     width:90%;
     margin:auto;
     padding:25px 0;
-    background-color: var(--teal);
+    font-size:105%;
+    /* background-color: var(--teal); */
 }
 
 
